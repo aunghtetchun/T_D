@@ -47,10 +47,12 @@ class ProfileController extends Controller
         $request->validate([
             'email' => "required|min:3|max:50",
             'acc' => "required|min:3|max:150",
+            'payment' => "required|min:3",
         ]);
         $user = User::find(Auth::id());
         $user->email = $request->email;
         $user->acc = $request->acc;
+        $user->payment = $request->payment;
         $user->update();
         return redirect()->route("profile.edit")->with("toast","Info change Successful");
     }

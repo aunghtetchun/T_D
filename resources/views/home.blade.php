@@ -4,7 +4,7 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mb-3">
                 <div class="card-header fw900 h5">မင်္ဂလာပါ</div>
 
                 <div class="card-body">
@@ -24,6 +24,14 @@
                     <a href="{{ App\User::where('role','admin')->first()->acc}}" class="btn btn-success px-3 py-2">သက်တမ်းတိုးရန်</a>
                     @endif
                      
+                </div>
+            </div>
+            <div class="card shadow shadow-lg">
+                <div class="card-body text-center">
+                    <p class="h5 fw900 text-danger">အသိပေးကြော်ညာအပ်ပါတယ်ခင်ဗျာ...</p>
+                    <p class="h5 fw900 text-danger">**************</p>
+                    <p class="px-3 mb-0">Viber {{App\User::where('role','admin')->first()->payment}}</p>
+                    
                 </div>
             </div>
         </div>

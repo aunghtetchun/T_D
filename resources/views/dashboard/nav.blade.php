@@ -17,7 +17,7 @@
                 <a class="menu-item mt-3" href="{{ route('home') }}">
                     <span>
                         <i class="feather-user"></i>
-                        Change to User်
+                        Change to User
                     </span>
                 </a>
             </li>

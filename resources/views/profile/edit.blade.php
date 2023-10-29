@@ -62,14 +62,23 @@
                             <div class="form-group">
                                 <label for="acc">
                                     <i class="mr-1 feather-user"></i>
-                                    Account
+                                   Payment Account
                                 </label>
                                 <input type="text" name="acc" class="form-control" value="{{ auth()->user()->acc }}">
                                 @error("acc")
                                 <small class="font-weight-bold text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
-
+                            <div class="form-group">
+                                <label for="payment">
+                                    <i class="mr-1 feather-user"></i>
+                                    Payment Info Text
+                                </label>
+                                <input type="text" name="payment" class="form-control" value="{{ auth()->user()->payment }}">
+                                @error("payment")
+                                <small class="font-weight-bold text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitch3" required>

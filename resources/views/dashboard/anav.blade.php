@@ -66,7 +66,7 @@
             @endcomponent
             <li>
 		@if(auth()->user()->role=='admin')
-			<a class="menu-item bg-success"  href="{{route('admin-home')}}"><span class="text-light"><i class="fas fa-user"></i>Change To Admin်</span></a>
+			<a class="menu-item bg-success"  href="{{route('admin-home')}}"><span class="text-light"><i class="fas fa-user"></i>Change To Admin</span></a>
 		@else
                 <a class="menu-item alert-secondary" onclick="logout()" href="#">
                     <span class="text-danger">
