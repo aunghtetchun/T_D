@@ -31,9 +31,13 @@ class AdminController extends Controller
     {
         $request->validate([
             'expired_at' => 'required',
+            'password' => 'min:6'
         ]);
 
         $user->expired_at = $request->expired_at;
+        if(isset($request->password)) {
+            $user->password=$request->password;
+        }
         $user->update();
         return redirect()->route('admin.userList')->with('toast', 'User updated successfully');
 

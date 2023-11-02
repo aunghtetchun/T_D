@@ -40,7 +40,10 @@
                 </div>
             </div>
             <div class="card mt-2">
-                        <div class="card-body px-0">
+            <div class="card-header">
+                           အနီးကပ် History
+                        </div>
+                        <div class="card-body p-2">
                         <table class="table table-bordered table-responsive">
                             <thead>
                                 <tr>
@@ -51,8 +54,8 @@
                             <tbody>
                                 @foreach(App\Post::where('type',3)->get() as $daily)
                                 <tr>
-                                <td>{{Carbon\Carbon::parse($daily->created_at)->toDateString()}}</td>
-                                <td> ( {{$daily->label_one }} ) &nbsp;{{ $daily->label_two }} &nbsp;{{ $daily->label_three }} </td>
+                                <td class="bg-danger text-light">{{Carbon\Carbon::parse($daily->created_at)->toDateString()}}</td>
+                                <td class="bg-primary text-light"> ( {{$daily->label_one }} ) &nbsp;{{ $daily->label_two }} &nbsp;{{ $daily->label_three }} </td>
                                 </tr>
                                 @endforeach
                             </tbody>

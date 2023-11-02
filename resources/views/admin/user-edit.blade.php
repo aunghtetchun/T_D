@@ -20,6 +20,10 @@
                         <label for="lable_one">Name</label>
                         <input type="text" name="label_one" disabled class="form-control" id="lable_one" value="{{ $user->name}}">
                     </div>
+                    <div class="form-group">
+                        <label for="password">New Password</label>
+                        <input type="text" placeholder="******" id="password" name="password" class="form-control" >
+                    </div>
         
                     <div class="form-group">
                         <label for="label_two">Expired Date</label>

@@ -51,9 +51,15 @@ class HomeController extends Controller
     public function birthday(){
         if(auth()->user()->expired_at > \Carbon\Carbon::now()->toDateString()){
 
-        $daily_num = Post::where('type',2)->whereDate('created_at', Carbon::today())
-        ->latest()
-        ->first();
+      
+            $startOfWeek = Carbon::now()->startOfWeek(); // Get the start of the current week
+            $endOfWeek = Carbon::now()->endOfWeek();     // Get the end of the current week
+            
+            $daily_num = Post::where('type', 2)
+                ->whereBetween('created_at', [$startOfWeek, $endOfWeek])
+                ->whereBetween('created_at', [Carbon::parse('last monday'), Carbon::parse('this friday')->endOfDay()])
+                ->latest()
+                ->first();
         return view('user.birthday',compact('daily_num'));
     }else{
         return view('home');

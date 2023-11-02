@@ -77,4 +77,4 @@ function htmltotext(text) {
 }
 
 
-$(".table").dataTable();
+$(".dttable").dataTable();

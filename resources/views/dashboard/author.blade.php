@@ -21,6 +21,11 @@
     <link href="{{ asset('dashboard/vendor/select_2/dist/css/select2.min.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('dashboard/css/style.css') }}">
     @yield('head')
+    <style>
+        .table{
+            margin-bottom:0 !important;
+        }
+    </style>
 </head>
 
 <body>
