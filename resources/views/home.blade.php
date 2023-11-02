@@ -30,7 +30,7 @@
                 <div class="card-body text-center">
                     <p class="h5 fw900 text-danger">အသိပေးကြော်ညာအပ်ပါတယ်ခင်ဗျာ...</p>
                     <p class="h5 fw900 text-danger">**************</p>
-                    <p class="px-3 mb-0">Viber {{App\User::where('role','admin')->first()->payment}}</p>
+                    <p class="px-3 mb-0">{{App\User::where('role','admin')->first()->payment}}</p>
                     
                 </div>
             </div>
