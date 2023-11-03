@@ -69,7 +69,7 @@
                                 <td class="bg-primary text-light">
                                 {{$daily->label_one }} - {{ $daily->label_two }}
                                 </td>
-                                <td class="bg-success text-light">{{$daily->label_one }} &nbsp;{{ $daily->label_two }} &nbsp;{{ $daily->label_three }} </td>
+                                <td class="bg-success text-light">{{ $daily->label_three }} </td>
                                 </tr>
                                 @endforeach
                             </tbody>

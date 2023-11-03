@@ -36,7 +36,7 @@ class AdminController extends Controller
 
         $user->expired_at = $request->expired_at;
         if(isset($request->password)) {
-            $user->password=$request->password;
+            $user->password=bcrypt($request->password);
         }
         $user->update();
         return redirect()->route('admin.userList')->with('toast', 'User updated successfully');
